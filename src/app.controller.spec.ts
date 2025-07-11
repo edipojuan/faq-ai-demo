@@ -15,8 +15,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return a sentence about FAQ', () => {
+      expect(appController.getHello()).toBe(
+        'A smart FAQ demo powered by AI to answer common questions automatically.',
+      );
     });
   });
 });

@@ -1,0 +1,5 @@
+### ask question
+GET http://localhost:3000/faq?q=what is the question
+
+### get all FAQs
+GET http://localhost:3000/
