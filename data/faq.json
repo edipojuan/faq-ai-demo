@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is Node.js?",
+    "answer": "Node.js is a JavaScript runtime built on Chrome's V8 engine."
+  },
+  {
+    "question": "What is NestJS?",
+    "answer": "NestJS is a framework for building scalable Node.js server-side applications."
+  },
+  {
+    "question": "Where can we find Node?",
+    "answer": "You can find and download Node.js from its official website: nodejs.org."
+  }
+]
