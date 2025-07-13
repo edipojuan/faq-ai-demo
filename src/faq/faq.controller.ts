@@ -6,8 +6,8 @@ export class FaqController {
   constructor(private readonly faqService: FaqService) {}
 
   @Get()
-  ask(@Query('q') question: string) {
-    const answer = this.faqService.findAnswer(question);
+  async ask(@Query('q') question: string) {
+    const answer = await this.faqService.findAnswer(question);
     return { answer };
   }
 }
