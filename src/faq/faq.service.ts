@@ -1,13 +1,16 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 import * as faqData from './../../data/faq.json';
 
 @Injectable()
 export class FaqService {
-  async getEmbedding(text: string): Promise<number[]> {
-    // process.env.OPENAI_API_KEY ||= '<put your token>';
+  constructor(private readonly configService: ConfigService) {}
 
-    if (!process.env.OPENAI_API_KEY) {
+  async getEmbedding(text: string): Promise<number[]> {
+    const apiKey = this.configService.get<string>('OPENAI_API_KEY');
+
+    if (!apiKey) {
       throw new Error('The OPENAI_API_KEY environment variable is not set!');
     }
 
@@ -19,7 +22,7 @@ export class FaqService {
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${apiKey}`,
         },
       },
     );
