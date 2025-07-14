@@ -1,10 +1,10 @@
 ## :construction: This project is under construction. Updates coming soon!
 
-# FAQ with AI
+# Semantic FAQ search API using OpenAI embeddings
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A smart FAQ demo powered by AI to answer common questions automatically.
+A semantic FAQ search API using OpenAI embeddings. It receives a user question, compares it against a predefined list of FAQs using vector similarity, and returns the most relevant answer.
 
 ## Project setup
 
