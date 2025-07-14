@@ -1,5 +1,10 @@
 import { Injectable } from '@nestjs/common';
 
+/**
+ * Service providing application-level functionalities.
+ *
+ * @class AppService
+ */
 @Injectable()
 export class AppService {
   getHello(): string {
