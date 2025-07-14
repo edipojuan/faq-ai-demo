@@ -1,6 +1,12 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { FaqService } from './faq.service';
 
+/**
+ * Controller for handling FAQ-related endpoints.
+ *
+ * @controller
+ * @route /faq
+ */
 @Controller('faq')
 export class FaqController {
   constructor(private readonly faqService: FaqService) {}
