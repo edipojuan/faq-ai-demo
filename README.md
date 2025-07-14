@@ -1,5 +1,3 @@
-## :construction: This project is under construction. Updates coming soon!
-
 # Semantic FAQ search API using OpenAI embeddings
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -55,10 +53,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Deployment
-
--
 
 ## Resources
 
