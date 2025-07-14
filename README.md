@@ -12,6 +12,24 @@ A smart FAQ demo powered by AI to answer common questions automatically.
 $ npm install
 ```
 
+## 🔐 Environment Variables (.env)
+
+To get started, copy the example environment file and rename it:
+
+```bash
+cp .env.example .env
+```
+
+Then, open the .env file and replace the placeholder with your actual OpenAI API key:
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+You can generate your OpenAI API key by logging into your account and visiting:
+
+👉 https://platform.openai.com/account/api-keys
+
+⚠️ Keep your API key secure. Never commit .env files or sensitive credentials to version control.
+
 ## Compile and run the project
 
 ```bash
@@ -46,13 +64,14 @@ $ npm run test:cov
 
 -
 
-## Support
-
--
-
 ## Stay in touch
 
-- Author - [Édipo Juan](https://www.linkedin.com/in/edipojuan/)
+- LinkedIn - [Édipo Juan](https://www.linkedin.com/in/edipojuan/)
+
+## Author
+
+| [<img src="https://avatars1.githubusercontent.com/u/9813896?v=4&s=115"><br><sub>@edipojuan</sub>](https://github.com/edipojuan) |
+| :-----------------------------------------------------------------------------------------------------------------------------: |
 
 ## License
 
