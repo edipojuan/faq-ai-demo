@@ -1,0 +1,31 @@
+name: CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  test-and-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Download the code from your repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Configure the Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # 3. Install the dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Run tests and generate coverage
+      - name: Run tests and create coverage report
+        run: npm test -- --coverage
+
+      # 5. Send the report to Codecov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

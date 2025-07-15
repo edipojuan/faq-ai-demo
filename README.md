@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![codecov](https://codecov.io/github/edipojuan/faq-ai-demo/graph/badge.svg?token=5QVYR1J4NE)](https://codecov.io/github/edipojuan/faq-ai-demo)
+
 A semantic FAQ search API using OpenAI embeddings. It receives a user question, compares it against a predefined list of FAQs using vector similarity, and returns the most relevant answer.
 
 ## Project setup
