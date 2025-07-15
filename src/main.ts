@@ -9,7 +9,7 @@ import { AppModule } from './app.module';
  * @function
  * @returns {Promise<void>} A promise that resolves when the application has started listening.
  */
-async function bootstrap(): Promise<void> {
+export async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule);
   await app.listen(process.env.PORT ?? 3000);
 }
