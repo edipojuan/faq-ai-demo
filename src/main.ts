@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { GlobalExceptionFilter } from './common/filters/global-exception.filter';
 
 /**
  * Bootstraps the NestJS application by creating an instance of the app and starting the HTTP server.
@@ -11,6 +12,8 @@ import { AppModule } from './app.module';
  */
 export async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
+  app.useGlobalFilters(new GlobalExceptionFilter());
+  const port = process.env.PORT || 3000;
+  await app.listen(port);
 }
 bootstrap();
