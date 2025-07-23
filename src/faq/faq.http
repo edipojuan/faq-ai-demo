@@ -1,7 +1,7 @@
 // Sends a GET request to the local FAQ API endpoint with a query parameter 'q'.
 // The 'q' parameter specifies the question to be searched or answered by the FAQ service.
 // Example usage: Retrieves the answer for "what is the question" from the FAQ API.
-GET http://localhost:3000/faq?q=what is the question
+GET http://localhost:3000/faq?question2=what is the question
 
 // Sends a GET request to the root endpoint of the local server running on port 3000.
 // Useful for checking if the server is up and responding.
