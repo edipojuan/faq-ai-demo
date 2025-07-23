@@ -1,4 +1,10 @@
-import { Controller, Get, Inject, Query } from '@nestjs/common';
+import {
+  BadRequestException,
+  Controller,
+  Get,
+  Inject,
+  Query,
+} from '@nestjs/common';
 import { FaqService } from './faq.service';
 
 /**
@@ -13,7 +19,11 @@ export class FaqController {
   private readonly faqService: FaqService;
 
   @Get()
-  async ask(@Query('q') question: string) {
+  async ask(@Query('question') question: string) {
+    if (!question || question.trim() === '') {
+      throw new BadRequestException('Query parameter "question" is required');
+    }
+
     const answer = await this.faqService.findAnswer(question);
     return { answer };
   }
