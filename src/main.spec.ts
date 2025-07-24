@@ -1,6 +1,4 @@
-import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { GlobalExceptionFilter } from './common/filters/global-exception.filter';
 
 // Mock NestFactory
 const mockApp = {
@@ -35,11 +33,11 @@ describe('Main Bootstrap', () => {
     mockApp.listen.mockClear();
     mockNestFactory.create.mockClear();
     mockGlobalExceptionFilter.mockClear();
-    
+
     // Reset mock implementations
     mockNestFactory.create.mockResolvedValue(mockApp);
     mockApp.listen.mockResolvedValue(undefined);
-    
+
     // Reset environment variables
     process.env = { ...originalEnv };
   });
